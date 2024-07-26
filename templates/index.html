@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %}
+
+<h1 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: brown;">UPLOAD TRAFFIC SIGN⛔</h1>
+<style> .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2dcba7;
+   color: black;
+   text-align: center;
+   font-size: 25px;
+   font-weight: bold;
+}</style>
+
+<div style="text-align:center ;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <form id="upload-file" method="post" enctype="multipart/form-data" >
+        <label for="imageUpload" class="upload-label" >
+            Upload...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;" >
+        <div class="img-preview" >
+            <div id="imagePreview" >
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-danger btn-lg " id="btn-predict">PREDICT TRAFFIC SIGN🚦 </button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none; text-align: center;"></div>
+
+    <h1 id="result" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif, sans-serif; font-size: large; color: rgb(207, 20, 92); font-size:xx-large; font-weight: bolder; ">
+        <h1 > </h1>
+        
+    </h1>
+    
+
+</div>
+
+{% endblock %}
+
